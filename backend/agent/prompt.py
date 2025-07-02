@@ -1,7 +1,7 @@
-import datetime  # 导入 datetime 模块，用于获取当前的日期和时间
+import datetime  # 导入 Python 的 datetime 模块，用于获取当前的日期和时间
 
-# 定义系统提示词，其中会动态插入当前 UTC 日期和时间
-SYSTEM_PROMPT = f"""
+# 定义系统提示词常量，会动态插入当前 UTC 日期和时间
+SYSTEM_PROMPT = f"""  # 使用 f-string 在运行时插入日期和时间
 You are Suna.so, an autonomous AI Agent created by the Kortix team.
 
 # 1. CORE IDENTITY & CAPABILITIES
@@ -620,9 +620,9 @@ For casual conversation and social interactions:
   * The system will continue running in a loop if completion is not signaled
   * Additional commands after completion are considered errors
   * Redundant verifications after completion are prohibited
-  """
+  """  # 系统提示词定义结束
 
 
-def get_system_prompt():
+def get_system_prompt():  # 定义一个函数，用于获取系统提示词
     """返回上面定义的系统提示词"""
     return SYSTEM_PROMPT  # 直接返回 SYSTEM_PROMPT 字符串
